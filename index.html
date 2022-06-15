@@ -5,6 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <!-- v-bind, concatenazione stringhe -->
+      <img :src="img + 100" alt="cane" />
+      <!-- v-bind di classe green è classe css e "moustaches" (v-text) -->
+      <h1 :class="{'color-green': isGreen }">{{ message }}</h1>
+      <!-- v-model, binding in due direzioni -->
+      <input type="text" v-model="message" />
+      <!-- v-on evento on click, al posto di action listener lancio method change -->
+      <button @click="change">Change color title</button>
+
+      <!-- Direttive strutturali -->
+      <div v-if="isGreen">Il titolo è verde</div>
+      <div v-else>Il titolo non è verde</div>
+      <!-- loop, colore è il nome della variabile temporanea che scorre su array -->
+      <ul>
+        <li v-for="(colore,index) in colori">{{index + " " +colore}}</li>
+      </ul>
+
+      <!-- I metodi di vue possono essere usati per ottenere valori -->
+
+      <div>{{print("Testo passato come parametro ")}}</div>
+
+      <h2>Loop su oggetti</h2>
+      Il messaggio corrente é : {{messaggioCorrente?.text}}
+
+      <div
+        v-for="messaggio in msgs"
+        @click="toggle(messaggio)"
+        :class="{active:messaggio.isActive}"
+        class="obj-list"
+      >
+        {{messaggio.text}} -
+        <span class="big">{{messaggio.isActive?"Attivo":"Non attivo"}} </span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

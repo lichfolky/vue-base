@@ -29,20 +29,13 @@ var app = new Vue({
 })
 ```
 
-Cosa vedere:
+Visto:
 
-- [ ] Baffi {{msg}}
-- [ ] Bind (src immagine)
-- [ ] v-model (input)
-- [ ] v-class ({done:isDone})
-- [ ] v-if e v-else
-- [ ] v-for
-- [ ] Methods
-- [ ] Click events (@)
-
-```
-function dataDiOggi () {
-    const today = new Date();
-    return "oggi è il " + today.toLocaleDateString("it-IT");
-}
-```
+- [x] Baffi {{msg}}
+- [x] Bind (src immagine)
+- [x] v-model (input)
+- [x] v-class ({done:isDone})
+- [x] v-if e v-else
+- [x] v-for
+- [x] Methods
+- [x] Click events (@)

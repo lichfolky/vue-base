@@ -1,0 +1,39 @@
+:root {
+  font-size: 105%;
+}
+
+img {
+  display: block;
+}
+
+div {
+  padding: 1rem 0;
+}
+
+input {
+  margin: 1rem 0;
+  display: block;
+  width: 300px;
+}
+
+.obj-list.active {
+  color: royalblue;
+  font-weight: 900;
+}
+
+.obj-list {
+  color: white;
+  background: lightsalmon;
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.big {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.color-green {
+  color: green;
+}
